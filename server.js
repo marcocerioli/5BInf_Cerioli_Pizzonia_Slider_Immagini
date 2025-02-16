@@ -21,14 +21,6 @@ app.post("/upload", multer({ storage: storage}).single('file'), async (req, res)
   await database.insert("./files/" + req.file.originalname);
   res.json({result: "ok" });  
 });
-/*app.post('/upload', async (req, res) => {
-     const value = await upload(req, res);
-      res.json({url: "./files/" });    
-    
-    //console.log(req.file.filename);    
-    //await database.insert("./files/" + req.file.filename);
-    
-});*/
 app.get('/images', async (req, res) => {
     const list = await database.select();
     res.json(list);

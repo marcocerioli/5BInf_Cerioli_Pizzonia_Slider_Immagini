@@ -1,3 +1,7 @@
+import { createNavigator } from "../components.js";
+
+const navigator = createNavigator(document.querySelector("#container"));
+
 const createMiddleware = () => {
     return {
       load: async () => {
@@ -71,5 +75,3 @@ const createMiddleware = () => {
   }
   
   controller(createMiddleware());
-  
-  
