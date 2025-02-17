@@ -1,4 +1,4 @@
-import { createNavigator } from "../components.js";
+import { createNavigator } from "./components.js";
 
 const buttonInviaLogin = document.getElementById("button-login-invia")
 
@@ -67,7 +67,7 @@ const createMiddleware = () => {
     const button = document.querySelector("#button");  
     const listUL = document.getElementById("listUL");
   
-    handleSubmit = async (event) => {
+    const handleSubmit = async (event) => {
       await middleware.upload(inputFile);
       const list = await middleware.load();
       render(list);
