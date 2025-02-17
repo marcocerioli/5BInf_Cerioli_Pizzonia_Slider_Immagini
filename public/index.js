@@ -4,9 +4,10 @@ const buttonInviaLogin = document.getElementById("button-login-invia")
 
 const navigator = createNavigator(document.querySelector("#container"));
 
+//manca la chiamata al conf.json
 
 
-button_login.onclick = () => {   
+buttonInviaLogin.onclick = () => {   
   fetch("https://ws.cipiaceinfo.it/credential/login", {
      headers: {
         'Content-Type': 'application/json',
