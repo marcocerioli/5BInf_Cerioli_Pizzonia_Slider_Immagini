@@ -4,6 +4,28 @@ const buttonInviaLogin = document.getElementById("button-login-invia")
 
 const navigator = createNavigator(document.querySelector("#container"));
 
+
+
+button_login.onclick = () => {   
+  fetch("https://ws.cipiaceinfo.it/credential/login", {
+     headers: {
+        'Content-Type': 'application/json',
+        'key': confData.token
+     },
+     method: "POST",
+     body: JSON.stringify({
+        username: usernameLogin.value,
+        password: passwordLogin.value
+     })
+  }).then(r => r.json())
+  .then(r => {
+     responseLogin.innerText = "Risposta : " + r.result;
+  })
+  .catch(r => {
+     responseLogin.innerText = "Risposta : " + r.result;
+  })
+}
+
 const createMiddleware = () => {
     return {
       load: async () => {
@@ -75,5 +97,6 @@ const createMiddleware = () => {
     button.onclick = handleSubmit();
     middleware.load().then(render);
   }
+
   
   controller(createMiddleware());
