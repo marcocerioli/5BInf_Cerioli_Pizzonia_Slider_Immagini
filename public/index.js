@@ -1,5 +1,7 @@
 import { createNavigator } from "../components.js";
 
+const buttonInviaLogin = document.getElementById("button-login-invia")
+
 const navigator = createNavigator(document.querySelector("#container"));
 
 const createMiddleware = () => {
