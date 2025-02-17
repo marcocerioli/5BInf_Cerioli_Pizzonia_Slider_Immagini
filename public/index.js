@@ -70,7 +70,7 @@ const createMiddleware = () => {
       const list = await middleware.load();
       render(list);
     }
-    button.onclick = handleSubmit;
+    button.onclick = handleSubmit();
     middleware.load().then(render);
   }
   
