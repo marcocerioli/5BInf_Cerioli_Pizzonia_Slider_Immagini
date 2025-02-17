@@ -1,4 +1,4 @@
-import { createNavigator } from "./components.js";
+import { createNavigator } from "./navigator.js";
 
 const buttonInviaLogin = document.getElementById("button-login-invia")
 
