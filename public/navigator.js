@@ -23,4 +23,4 @@ const hide = (elements) => {
     }
     window.addEventListener('popstate', render); 
     render();   
- }
+ };
