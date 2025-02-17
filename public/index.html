@@ -13,24 +13,17 @@
    <div id = container class="container">
 
       <div id="home" class="page">
-         <div class="row">
-               <a href="#amministrazione" id="aAdmin" class="hidden"> <button class="btn btn-success bottoneAmministrazione" type="button">Administration</button> </a>
-               <div id="home-table" class="rounded" class="d-flex flex-column" style="background-color: #FFF5EE; width: 400px; height: 400px;">
-            </div>
+         <a href="#amministrazione" id="aAdmin" class="hidden"> <button class="btn btn-success bottoneAmministrazione" type="button">Administration</button> </a>
+         <div id="home-table" class="rounded" class="d-flex flex-column" style="background-color: #FFF5EE; width: 400px; height: 400px;">
          </div>
       </div>
       <div id = "amministrazione" class = "page">
-            <div class="row">
-               <input id="file" name="file" type="file" single>
-               <button id="button" type="button" class="btn btn-success">Upload</button>
-         
+            <a href="#home" id="aHome" class="hidden"> <button class="btn btn-success bottoneAmministrazione" type="button">home</button> </a>
+            <input id="file" name="file" type="file" single>
+            <button id="button-login-invia" type="button" class="btn btn-success">Upload</button>
          </div>
-         <div class="row">
-            <ul id="listUL" class="list-group">
-               
-            </ul>
-            </div>
-         </div>
+         <ul id="listUL" class="list-group">
+         </ul>
       </div>
       
    <script type = "module" src="./index.js"></script>
