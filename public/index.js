@@ -7,7 +7,7 @@ const navigator = createNavigator(document.querySelector("#container"));
 //manca la chiamata al conf.json
 
 
-buttonInviaLogin.onclick = () => {   
+/*buttonInviaLogin.onclick = () => {   
   fetch("https://ws.cipiaceinfo.it/credential/login", {
      headers: {
         'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ buttonInviaLogin.onclick = () => {
   .catch(r => {
      responseLogin.innerText = "Risposta : " + r.result;
   })
-}
+}*/
 
 const createMiddleware = () => {
     return {
